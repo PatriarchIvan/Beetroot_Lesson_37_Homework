@@ -98,6 +98,25 @@ $(".progress-bar").loading({
 	duration: 2000
 });
 
-window.addEventListener('click', (e) => {
-	console.log(e.target);
+$(document).ready(
+	$('.card__buy').toggle(),
+	$('.card__info').toggle()
+);
+
+$('#body').click(() => {
+	$('.card__body').show('slow');
+	$('.card__buy').hide('slow');
+	$('.card__info').hide('slow');
+});
+
+$('#buy').click(() => {
+	$('.card__buy').show('slow');
+	$('.card__info').hide('slow');
+	$('.card__body').hide('slow');
+});
+
+$('#info').click(() => {
+	$('.card__info').show('slow');
+	$('.card__buy').hide('slow');
+	$('.card__body').hide('slow');
 });

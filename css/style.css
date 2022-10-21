@@ -77,19 +77,22 @@ body {
 }
 
 .main {
+  position: relative;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   color: #fff;
   margin: 0 auto;
   width: 100%;
-  max-width: 1000px;
-  min-height: 860px;
+  width: 1000px;
+  height: 860px;
   background-image: url("../source/img/main/bg-image.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
 }
 
 .card {
+  position: absolute;
   padding: 150px 200px;
 }
 .card .nav {
@@ -118,17 +121,19 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  -webkit-transition: all 1.2s ease;
-  -o-transition: all 1.2s ease;
-  transition: all 1.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: rgba(255, 250, 187, 0.537254902);
 }
 .card .nav__item:hover {
   cursor: pointer;
+  color: #fff;
 }
 .card .nav__item:hover .svg path {
   stroke: #fff;
 }
-.card__body {
+.card__body, .card__buy, .card__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,6 +144,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #212534;
+}
+.card__buy, .card__info {
+  padding: 20px 40px;
 }
 
 .rate {

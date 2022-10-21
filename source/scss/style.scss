@@ -7,19 +7,22 @@ body {
 }
 
 .main {
+    position: relative;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: #fff;
     margin: 0 auto;
     width: 100%;
-    max-width: 1000px;
-    min-height: 860px;
+    width: 1000px;
+    height: 860px;
     background-image: url("../source/img/main/bg-image.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center center;
 }
 
 .card {
+    position: absolute;
     padding: 150px 200px;
 
     .nav {
@@ -38,10 +41,12 @@ body {
             flex-direction: column;
             align-items: center;
             gap: 10px;
-            transition: all 1.2s ease;
+            transition: all 0.2s ease;
+            color: #fffabb89;
 
             &:hover {
                 cursor: pointer;
+                color: #fff;
                 .svg path {
                     stroke: #fff;
                 }
@@ -49,11 +54,18 @@ body {
         }
     }
 
-    &__body {
+    &__body,
+    &__buy,
+    &__info {
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: #212534;
+    }
+
+    &__buy,
+    &__info {
+        padding: 20px 40px;
     }
 }
 
@@ -157,7 +169,6 @@ body {
 .progress-bar .left {
     clip: rect(0 33.5px 75px 0);
     opacity: 1;
-    // background-color: #b3cef6;
     background-color: #1AE780;
 
 }
@@ -182,8 +193,6 @@ body {
 
 .buy {
     display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 1fr 1fr;
 
     .buy__discount {
         display: flex;
